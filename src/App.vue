@@ -1,11 +1,21 @@
-<script setup></script>
+<script setup>
+import VerseContainer from './VerseContainer.vue';
+
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="main-container">
+    <VerseContainer></VerseContainer>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(44, 44, 44);
+}
+</style>
