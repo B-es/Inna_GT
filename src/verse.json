@@ -3,8 +3,9 @@
     [
             {
                 "id": "w11",
-                "content": "Реки",
-                "variants": ["", "", ""]
+                "content": "",
+                "variants": ["Река", "Нога", "Рука"],
+                "editable": true
             },
             {
                 "id": "w12",
@@ -16,7 +17,9 @@
             },
             {
                 "id": "w14",
-                "content": "родном"
+                "content": "",
+                "variants": ["родном", "чужом", "моём"],
+                "editable": true
             },
             {
                 "id": "w15",
@@ -34,7 +37,9 @@
             },
             {
                 "id": "w23",
-                "content": "давно"
+                "content": "",
+                "variants": ["давно", "оно", "тепло"],
+                "editable": true
             },
             {
                 "id": "w24",

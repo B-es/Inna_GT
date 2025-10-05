@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { DataVerseRepository } from './DataVerseRepository'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+
+app.provide("dataVerseRepository", new DataVerseRepository());
+
+app.mount('#app')

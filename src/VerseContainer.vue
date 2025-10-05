@@ -1,22 +1,35 @@
 <script setup>
 import SentenceContainer from './SentenceContainer.vue';
-import WordContainer from './WordContainer.vue';
-import verseJson from './verse.json';
+import { inject, ref, watch } from 'vue';
 
+const dataVerseRepository = inject('dataVerseRepository');
 
+const isPreview = ref(true);
 
-
+watch(isPreview, (newValue) => {
+  dataVerseRepository.setEditablesTo(newValue);
+}, { immediate: true })
 </script>
 
 <template>
   <div class="container">
-    <SentenceContainer v-for="(row, index) in verseJson" :key="'row'+index">
-      <WordContainer v-for="wordData in row" :key="wordData.id">{{ wordData.content }}</WordContainer><br>
-    </SentenceContainer>
+    <label class="checkbox-wrapper">
+      <input type="checkbox" v-model="isPreview">
+      Режим редактирования
+    </label>
+    <SentenceContainer v-for="(row, index) in dataVerseRepository.data" :key="'row'+index" :words-data="row"></SentenceContainer>
   </div>
 </template>
 
 <style scoped>
+
+.checkbox-wrapper {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
 .container {
   background-color: red;
   border-radius: 5px;
