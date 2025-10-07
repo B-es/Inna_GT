@@ -38,18 +38,24 @@ span {
   color: white;
   border-bottom: 1px solid white;
   border-radius: 0px;
-  padding: 5px;
+  padding: .4rem;
   margin: 5px;
   max-width: 100%;
   display: inline-block;
-  transition: padding .3s ease;
+  transition: all .3s ease;
+}
+
+@media(max-width: 768px){
+  span {
+    font-size: 18px;
+    padding: .1rem;
+    margin: 3px;
+  }
 }
 
 .isEditable {
   color: white;
-  border: 5px solid rgb(255, 255, 255);
-  border-top: 0;
-  border-right: 0;
+  background-color: red;
   border-radius: 5px;
 }
 
@@ -57,7 +63,6 @@ span {
   box-shadow: 0 5px 15px 0 rgb(0, 0, 0);
   color:red;
   background-color: white;
-  padding: .4rem;
   border-radius: 5px;
 }
 </style>

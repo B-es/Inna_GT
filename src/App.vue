@@ -5,6 +5,7 @@
     <VerseContainer></VerseContainer>
     <VariantPicker></VariantPicker>
     <ResultButton v-if="dataVerseRepository.getEmptyContentWordWithVariants() === undefined">Озвучить</ResultButton>
+    <video autoplay muted loop src="/video_back.mp4"></video>
   </div>
 </template>
 
@@ -31,7 +32,20 @@ provide('currentWord', currentWord)
 
 
 <style scoped>
+
+video {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
 .main-container {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -39,7 +53,7 @@ provide('currentWord', currentWord)
   justify-content: center;
   flex-direction: column;
   gap: 30px;
-  background-color: rgb(44, 44, 44);
+  /* background-color: rgb(44, 44, 44); */
 }
 </style>
 
@@ -49,9 +63,6 @@ provide('currentWord', currentWord)
   font-size: 25px;
 }
 
-h1 {
-  color: white
-}
 
 button {
   box-shadow: 0 5px 15px 0 rgb(246, 11, 11);
@@ -64,5 +75,10 @@ button {
 button:hover {
   transform: translate(0, -3px);
   box-shadow: 0 20px 40px 0 rgb(246, 11, 11);
+}
+
+button:active {
+  background-color: red;
+  color: white;
 }
 </style>
