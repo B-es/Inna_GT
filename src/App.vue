@@ -5,11 +5,13 @@
     <VerseContainer></VerseContainer>
     <VariantPicker></VariantPicker>
     <ResultButton v-if="dataVerseRepository.getEmptyContentWordWithVariants() === undefined">Озвучить</ResultButton>
+    <PopUp></PopUp>
     <video autoplay muted loop src="/video_back.mp4"></video>
   </div>
 </template>
 
 <script setup>
+import PopUp from './PopUp.vue';
 import ResultButton from './ResultButton.vue';
 import VariantPicker from './VariantPicker.vue';
 import VerseContainer from './VerseContainer.vue';
@@ -20,14 +22,16 @@ const dataVerseRepository = inject("dataVerseRepository");
 
 const currentWord = ref({});
 
+const showPopUp = ref(false);
+
 // Предоставляем функцию для установки вариантов
 const setWord = (word) => {
   currentWord.value = word
-  console.log(currentWord.value)
 }
 //setWord(dataVerseRepository.getEmptyContentWordWithVariants());
 provide('setWord', setWord)
 provide('currentWord', currentWord)
+provide('showPopUp', showPopUp)
 </script>
 
 

@@ -45,4 +45,12 @@ export class DataVerseRepository {
       }
     }
   }
+
+  assembly(){
+    let verse = "";
+    for (const row of this.data) {
+      verse += row.map(obj => obj.content).join(" ") + "\n";
+    }
+    return verse;
+  }
 }

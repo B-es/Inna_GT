@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="dataVerseRepository.getEmptyContentWordWithVariants() !== undefined" class="container">
     <button class="variant-btn"
       @click="handleClick(word.id, index)"
       v-for="(variant, index) in word.variants"
