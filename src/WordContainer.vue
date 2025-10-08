@@ -38,7 +38,7 @@ span {
   color: white;
   border-bottom: 1px solid white;
   border-radius: 0px;
-  padding: .4rem;
+  padding: .1rem;
   margin: 5px;
   max-width: 100%;
   display: inline-block;
@@ -53,9 +53,13 @@ span {
   }
 }
 
+.isEditable:hover {
+  background-color: white;
+}
+
 .isEditable {
   color: white;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.212);
   border-radius: 5px;
 }
 

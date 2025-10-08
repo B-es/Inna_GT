@@ -4,8 +4,8 @@
     <h1>Напиши себе поздравление</h1>
     <VerseContainer></VerseContainer>
     <VariantPicker></VariantPicker>
-    <ResultButton v-if="dataVerseRepository.getEmptyContentWordWithVariants() === undefined">Озвучить</ResultButton>
-    <PopUp></PopUp>
+    <!-- <ResultButton v-if="dataVerseRepository.getEmptyContentWordWithVariants() === undefined">Озвучить</ResultButton> -->
+    <!-- <PopUp></PopUp> -->
     <video autoplay muted loop src="/video_back.mp4"></video>
   </div>
 </template>
@@ -62,11 +62,6 @@ video {
 </style>
 
 <style>
-* {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px;
-}
-
 
 button {
   box-shadow: 0 5px 15px 0 rgb(246, 11, 11);

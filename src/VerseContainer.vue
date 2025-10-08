@@ -58,7 +58,7 @@ watch(isPreview, (newValue) => {
   position: relative;
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 4%;
+  padding: 2%;
 }
 
 @media(max-width: 768px){
